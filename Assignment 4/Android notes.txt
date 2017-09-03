@@ -1,0 +1,227 @@
+tabLayout.getTabAt(0).setIcon();
+        tabLayout.getTabAt(1).setIcon();
+        tabLayout.getTabAt(2).setIcon();
+        tabLayout.getTabAt(3).setIcon();
+        tabLayout.getTabAt(4).setIcon();
+		
+		
+		
+		
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout., container, false);
+
+            return rootView;
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		package com.example.akshaykumars.fbapplication;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
+
+import java.util.List;
+
+/**
+ * Created by Akshay Kumar S on 4/13/2017.
+ */
+
+public class ListAdaptor extends ArrayAdapter<Items> {
+
+    private Context context;
+    public ListAdaptor(Context context, int textViewResourceId) {
+        super(context, textViewResourceId);
+    }
+
+    public ListAdaptor(Context context, int resource, List<Items> items) {
+        super(context, resource, items);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+
+        View v = convertView;
+
+        if (v == null) {
+            LayoutInflater vi;
+            vi = LayoutInflater.from(getContext());
+            v = vi.inflate(R.layout.itemlistrow, null);
+        }
+
+        Items p = getItem(position);
+
+        if (p != null) {
+            ImageView image = (TextView) v.findViewById(R.id.imageUrl);
+            TextView tt2 = (TextView) v.findViewById(R.id.name);
+
+            if (image != null) {
+                Picasso.with(context).load(p.getUrl()).into(image);
+            }
+
+            if (tt2 != null) {
+                tt2.setText(p.getName());
+            }
+        }
+
+        return v;
+    }
+
+}
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="100">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5" />
+</LinearLayout>
+
+
+
+ private class MyListener implements View.OnClickListener{
+        private Context mContext;
+        private String mValue;
+        public MyListener(Context context, String value){
+            mContext = context;
+            mValue = value;
+        }
+
+        @Override
+        public void onClick(View v){
+		
+            //do whatever you need here
+            //if you need some view, use mContext.findViewById
+        }
+    }
+	
+	
+	
+	
+	
+	
+	
+<!-- TODO: Update blank fragment layout -->
+<ImageView
+    android:id="@+id/imageView3"
+    android:layout_width="40dp"
+    android:layout_height="45dp"
+    android:layout_marginRight="10dp"
+    app:srcCompat="@mipmap/ic_launcher_round" />
+
+<TextView
+    android:id="@+id/textView6"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:text="TextView" />
+
+<TextView
+    android:id="@+id/textView4"
+    android:layout_width="wrap_content"
+    android:layout_height="15dp"
+    android:padding="10dp"
+    android:text="TextView"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	Student mStudentObject=new Student();
+ SharedPreferences appSharedPrefs = PreferenceManager
+  .getDefaultSharedPreferences(this.getApplicationContext());
+  Editor prefsEditor = appSharedPrefs.edit();
+  Gson gson = new Gson();
+  String json = gson.toJson(mStudentObject);
+  prefsEditor.putString("MyObject", json);
+  prefsEditor.commit(); 
+  
+  
+  
+  
+  
+  SharedPreferences appSharedPrefs = PreferenceManager
+      .getDefaultSharedPreferences(this.getApplicationContext());
+      Gson gson = new Gson();
+ String json = appSharedPrefs.getString("MyObject", "");
+  Student mStudentObject = gson.fromJson(json, Student.class);
+  
+  
+  
+  Type type = new TypeToken<List<Student>>(){}.getType();
+List<Student> students= gson.fromJson(json, type);
+
+
+
+
+            android:name=".TabbedActivity"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				app:popupTheme="@style/AppTheme.PopupOverlay
+

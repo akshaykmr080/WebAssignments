@@ -1,0 +1,16 @@
+.on {
+         background-color: yellow;
+    }
+.booked {
+        color: rgb(244, 215, 66);
+    }
+.navbar-nav {
+    display:table;
+    width:100%;
+    margin: 0;
+}
+.navbar-nav li {
+    display: table-cell;
+    text-align:center;
+    width:20%;
+}
